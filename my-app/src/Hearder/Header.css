@@ -1,0 +1,35 @@
+.Herder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+}
+
+.title {
+    margin-left: 50px;
+}
+
+.btn-out {
+    display: flex;
+    height: 7vh;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.time {
+    margin-left: 65px;
+}
+
+.day {
+    margin-left: 50px;
+}
+
+.title2 {
+    display: flex;
+}
