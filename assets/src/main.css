@@ -1,0 +1,65 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .condition {
+        display: flex;
+    }
+    
+    .menu {
+        background-color: #09006F;
+        flex: 0.5;
+    }
+    
+    .img p {
+        color: aliceblue;
+    }
+    
+    .control {
+        flex: 3;
+    }
+    
+    .temperture {
+        background-color: blue;
+        flex: 1;
+    }
+    
+    .img {
+        padding: 45px 0px;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    .img:hover {
+        border-radius: 21px;
+        background: #3D0099;
+    }
+    
+    .control {}
+    
+    .img_ari {
+        display: flex;
+    }
+    
+    .img_ari p {
+        margin: auto;
+        color: #000;
+        font-family: Roboto;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .control_ari {
+        border-radius: 25px;
+        background: #F7F1FF;
+        justify-content: space-between;
+        display: flex;
+        padding: 20PX;
+    }

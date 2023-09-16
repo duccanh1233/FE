@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/src/home.css">
+    <script src="assets/src/home.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="home">
+        <div class="Top_Navbar">
+            <div class="me">
+                <div class="meta">
+                    <p>SmartHome</p>
+                </div>
+                <ul class="time_date">
+                    <div class="time"></div>
+                    <div class="date"></div>
+                </ul>
+            </div>
+            <div class="btn-out">
+                <img src="assets/img/home/btn - Sign Out.svg" alt>
+            </div>
+        </div>
+        <div class="while">
+
+        </div>
+
+        <div class="main">
+            <div class="Main_Navbar">
+                <div class="board_1">
+                    <ul class="das">
+                        <li><img class="Dashboard" src="assets/img/home/Icon - Security.svg" alt></li>
+                        <li>
+                            <p>Dashboard</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board">
+                    <ul class="das">
+                        <li><img class="Dashboard" src="assets/img/home/Icon - Devices.svg" alt></li>
+                        <li>
+                            <p>Devices</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board">
+                    <ul class="das">
+                        <li><img class="Dashboard" src="assets/img/home/Icon - Lights.svg" alt></li>
+                        <li>
+                            <p>Light</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board">
+                    <ul class="das">
+                        <li><img class="Dashboard" src="assets/img/home/Icon - Temperature.svg" alt></li>
+                        <li>
+                            <p>Temperature</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board">
+                    <ul class="das">
+                        <li><img class="Dashboard" src="assets/img/home/Icon - Electricity.svg" alt></li>
+                        <li>
+                            <p>Electricity</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board">
+                    <ul class="das">
+                        <li><img class="Dashboard" src="assets/img/home/Icon - Water.svg" alt></li>
+                        <li>
+                            <p>Water</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board">
+                    <ul class="das">
+                        <li><img class="Dashboard" src="assets/img/home/Icon - Wi-Fi.svg" alt></li>
+                        <li>
+                            <p>Wifi</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mid">
+                <div class="weather">
+                    <div class="nhietdo">
+                        <a>Weather</a>
+                        <p>Rasht</p>
+                        <p> 11 C</p>
+                    </div>
+                    <div class="img_nhietdo">
+                        <img src="assets/img/home/Illustrator.svg" alt>
+                    </div>
+                </div>
+
+                <div class="weather_1">
+                    <div class="tem"><a>Temperture</a></div>
+
+                    <div class="img_doam">
+                        <img class="temperture" src="assets/img/home/Icon.svg" alt>
+                        <div id="doam">
+                            Te
+                        </div>
+                        <sup class="icon_doam">&deg;C</sup>
+                        <ul class="higher">
+                            <li> <img class="img_higher" src="assets/img/home/Higher.svg" alt>
+                            </li>
+                            <li> <img class="img_lower" src="assets/img/home/Lower.svg" alt>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="auto">
+                        <div class="name">
+                            <p>Auto Room System</p>
+                        </div>
+                        <div class="img_toggle">
+                            <div class="toggle" onclick="Animatedtoggle()">
+                                <div class="toggle-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather_2">
+                    <div class="wifi">
+                        <a>Wifi</a>
+                        <p>Rasht</p>
+                        <p> 11 C</p>
+                    </div>
+                    <div class="img_nhietdo">
+                        <img src="assets/img/home/Illustrator.svg" alt>
+                    </div>
+                </div>
+                <div class="weather_3">
+                    <div class="Electricity">
+                        <a>Electricity</a>
+                        <p>Rasht</p>
+                        <p> 11 C</p>
+                    </div>
+                    <div class="img_nhietdo">
+                        <img src="assets/img/home/Illustrator.svg" alt>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="quick">
+                    <p>Quick Panel</p>
+                </div>
+                <ul class="light">
+                    <div class="img_light"><img src="assets/img/home/Icon - Lights.svg" alt>
+                        <p>Light</p>
+                    </div>
+                    <img src="assets/img/home/Toggle.svg" alt>
+                </ul>
+                <ul class="light">
+                    <div class="img_light">
+                        <img src="assets/img/home/Icon - Music.svg" alt>
+                        <p>Music</p>
+                    </div>
+                    <img src="assets/img/home/Toggle.svg" alt>
+                </ul>
+                <ul class="light">
+                    <div class="img_light">
+                        <img src="assets/img/home/Icon - Wi-Fi.svg" alt>
+                        <p>Wifi</p>
+                    </div>
+                    <img src="assets/img/home/Toggle.svg" alt>
+                </ul>
+                <ul class="light">
+                    <div class="img_light">
+                        <img src="assets/img/home/CCTV Cam.svg" alt>
+                        <p>CCTV Cam</p>
+                    </div>
+                    <img src="assets/img/home/Toggle.svg" alt>
+                </ul>
+                <ul class="light">
+                    <div class="img_light">
+                        <img src="assets/img/home/Icon - Door.svg" alt>
+                        <p>Door Lock</p>
+                    </div>
+                    <img src="assets/img/home/Toggle.svg" alt>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var max, at_OK;
+
+        function makeid() {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < 5; i++)
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+            return text;
+        }
+        var client = new Paho.MQTT.Client("broker.hivemq.com", 8000, makeid());
+        client.onConnectionLost = onConnectionLost;
+        client.onMessageArrived = onMessageArrived;
+        var options = {
+            useSSL: false,
+            userName: "",
+            password: "",
+            onSuccess: onConnect,
+            onFailure: doFail
+        }
+        console.log("Connect to broker.hivemq.com:8000");
+        client.connect(options);
+
+        function doFail(e) {
+            console.log(e);
+        }
+
+        function onConnect() //sự kiên kết nối thành công
+        {
+            console.log("Connect OK");
+            client.subscribe("device/temp"); //đăng kí kênh 
+        }
+
+        function onConnectionLost(responseObject) {
+            if (responseObject.errorCode !== 0) {
+                console.log(responseObject.errorMessage);
+            }
+        }
+
+        function onMessageArrived(message) {
+            console.log(message.destinationName + ":" + message.payloadString);
+            document.getElementById("doam").innerHTML = " " + message.payloadString;
+            var sensorValue = parseInt(document.getElementById("doam").innerHTML);
+            /* if (sensorValue == 6) {
+                 console.log("off");
+                 toggle.classList.remove("active");
+                 public('home/light', 'off');
+             } else {
+                 toggle.classList.add("active");
+                 public('home/light', 'on');
+                 console.log("on");
+             }*/
+        }
+
+        function public(topic, data) {
+            message = new Paho.MQTT.Message(data);
+            message.destinationName = topic;
+            client.send(message);
+        }
+
+        //btn
+        let toggle = document.querySelector(".toggle");
+        let text = document.querySelector(".text");
+
+        function Animatedtoggle() {
+            toggle.classList.toggle("active");
+            if (toggle.classList.contains("active")) {
+                //text.innerHTML = "ON";
+                public('home/light', 'on');
+                console.log("on");
+            } else {
+                // text.innerHTML = "OFF";
+                public('home/light', 'off');
+                console.log("off");
+
+            }
+        }
+        //date
+        document.addEventListener("DOMContentLoaded", function() {
+            const timeElement = document.querySelector(".time");
+            const dateElement = document.querySelector(".date");
+
+            /** 
+            @param {Date} date
+            **/
+            function formatTime(date) {
+                const hours12 = date.getHours() % 12 || 12;
+                const minutes = date.getMinutes();
+                const second = date.getSeconds();
+                const isAm = date.getHours() < 12;
+
+                return `${hours12.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${second.toString().padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
+            }
+
+            /** 
+            @param {Date} date
+            **/
+            function formatDate(date) {
+                const DAYS = [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ];
+                const MONTHS = [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ];
+                return `${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`;
+            }
+            setInterval(() => {
+                const now = new Date();
+
+                timeElement.textContent = formatTime(now);
+                dateElement.textContent = formatDate(now);
+
+            }, 200);
+        });
+    </script>
+</body>
+
+</html>
